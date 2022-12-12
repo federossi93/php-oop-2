@@ -54,6 +54,15 @@ $pesceGiocattolo->nome = 'Pesce Giocattolo';
 $pesceGiocattolo->prezzo = '13$';
 var_dump($pesceGiocattolo);
 
+
+$cardPodotti =[
+    $coccoleCuccia,
+    $shebaFilets,
+    $pesceGiocattolo,
+];
+
+var_dump($cardPodotti);
+
 ?>
 
 
@@ -79,42 +88,21 @@ var_dump($pesceGiocattolo);
 <body>
     <div class="container">
         <div class="row">
+            <?php foreach($cardPodotti as $value){ ?>
             <div class="col-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="<?php echo  $shebaFilets->img ?>" alt="">
+                    <img class="card-img-top" src="<?php echo  $value->img ?>" alt="">
                     <div class="card-body">
-                        <p>Nome: <?php echo $shebaFilets->nome ?> </p>
-                        <p>Prezzo: <?php echo $shebaFilets->prezzo ?> </p>
-                        <p><?php echo  $shebaFilets->icona ?></p>
-                        <p>Categoria: <?php echo $shebaFilets->categoria ?> </p>
+                        <p>Nome: <?php echo $value->nome ?> </p>
+                        <p>Prezzo: <?php echo $value->prezzo ?> </p>
+                        <p><?php echo  $value->icona ?></p>
+                        <p>Categoria: <?php echo $value->categoria ?> </p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="<?php echo  $coccoleCuccia->img ?>" alt="">
-                    <div class="card-body">
-                        <p>Nome: <?php echo $coccoleCuccia->nome ?> </p>
-                        <p>Prezzo: <?php echo $coccoleCuccia->prezzo ?> </p>
-                        <p><?php echo  $coccoleCuccia->icona ?></p>
-                        <p>Categoria: <?php echo $coccoleCuccia->categoria ?> </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="<?php echo  $pesceGiocattolo->img ?>" alt="">
-                    <div class="card-body">
-                        <p>Nome: <?php echo $pesceGiocattolo->nome ?> </p>
-                        <p>Prezzo: <?php echo $pesceGiocattolo->prezzo ?> </p>
-                        <p><?php echo  $shebaFilets->icona ?></p>
-                        <p>Categoria: <?php echo $pesceGiocattolo->categoria ?> </p>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
+    </div>
 </body>
 
 </html>
