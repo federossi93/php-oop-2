@@ -1,57 +1,22 @@
 <?php
 
-class Prodotto{
-
-    public $img;
-    public $nome;
-    public $prezzo;
-
-    public function __construct(String $img, String $nome, String $prezzo) {
-        $this->img = $img;
-        $this->nome = $nome;
-        $this->prezzo = $prezzo;
-    }
-}
-
-class Cane extends Prodotto{
-    public $icona;
-    public $categoria;
-
-    public function __construct(String $icona, String $categoria) {
-        $this->icona = $icona;
-        $this->categoria = $categoria;
-
-    }
-}
-
-class Gatto extends Prodotto{
-    public $icona;
-    public $categoria;
-
-    public function __construct(String $icona, String $categoria) {
-        $this->icona = $icona;
-        $this->categoria = $categoria;
-
-    }
-}
+require __DIR__ . '../Models/Prodotto.php';
+require __DIR__ . '../Models/Cane.php';
+require __DIR__ . '../Models/Gatto.php';
 
 
-$coccoleCuccia = new Cane('<i class="fa-solid fa-dog"></i>', 'cuccia');
-$coccoleCuccia->img = 'https://m.media-amazon.com/images/I/5149DWJnytL._AC_SY355_.jpg';
-$coccoleCuccia->nome = 'Sogni e Capricci Coccole-Cuccia';
-$coccoleCuccia->prezzo ='24$';
+//dividi in componenti le tue classi e ordina un po il codice
+
+$coccoleCuccia = new Cane('https://m.media-amazon.com/images/I/5149DWJnytL._AC_SY355_.jpg','Sogni e Capricci Coccole-Cuccia', '24$',  '<i class="fa-solid fa-dog"></i>', 'cuccia');
+
 var_dump($coccoleCuccia);
 
-$shebaFilets = new Gatto('<i class="fa-solid fa-cat"></i>', 'cibo');
-$shebaFilets->img = 'https://m.media-amazon.com/images/I/71AkPaJJW+L._AC_SL1500_.jpg';
-$shebaFilets->nome = 'Sheba Filets';
-$shebaFilets->prezzo = '37$';
+$shebaFilets = new Gatto('https://m.media-amazon.com/images/I/71AkPaJJW+L._AC_SL1500_.jpg','Sheba Filets','37$', '<i class="fa-solid fa-cat"></i>', 'cibo');
+
 var_dump($shebaFilets);
 
-$pesceGiocattolo = new Gatto('<i class="fa-solid fa-cat"></i>', 'giocattolo');
-$pesceGiocattolo->img = 'https://m.media-amazon.com/images/I/61z3PL6eB2L._AC_SL1200_.jpg';
-$pesceGiocattolo->nome = 'Pesce Giocattolo';
-$pesceGiocattolo->prezzo = '13$';
+$pesceGiocattolo = new Gatto('https://m.media-amazon.com/images/I/61z3PL6eB2L._AC_SL1200_.jpg','Pesce Giocattolo','13$', '<i class="fa-solid fa-cat"></i>', 'giocattolo');
+
 var_dump($pesceGiocattolo);
 
 
