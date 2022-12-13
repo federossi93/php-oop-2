@@ -1,11 +1,11 @@
 <?php
 
-require __DIR__ . '../Models/Prodotto.php';
-require __DIR__ . '../Models/Cane.php';
-require __DIR__ . '../Models/Gatto.php';
+require_once __DIR__ . '../Models/Prodotto.php';
+require_once __DIR__ . '../Models/Cane.php';
+require_once __DIR__ . '../Models/Gatto.php';
+require_once __DIR__ . '../Trait/Categoria.php';
 
 
-//dividi in componenti le tue classi e ordina un po il codice
 
 $coccoleCuccia = new Cane('https://m.media-amazon.com/images/I/5149DWJnytL._AC_SY355_.jpg','Sogni e Capricci Coccole-Cuccia', '24$',  '<i class="fa-solid fa-dog"></i>', 'cuccia');
 
